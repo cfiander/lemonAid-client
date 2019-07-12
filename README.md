@@ -8,10 +8,41 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Structure
 
+The main functionality of the app is open to all users. This represents the first two pages of the application--ingredients
+and Recipes--which are public routes. 
+
+The sole private route is the Saved Recipes page. This application uses JWT Authentication Tokens associated with proper username and login and stored in sessionStorage, which allow access to the saved recipes page, which itself is associated with a specific user.
+
 ### Three Main Pages
 
-#### Three Main Pages
+### IngredientsPage
 
+Users can add ingredients at the bottom of the page and launch a search for recipes.
+
+### RecipesPage
+
+Users are greeted with a rendered list of ingredients based on the Ingredients entered in the IngredientsPage. Data is carried over via context--and so is lost upon refresh. 
+
+### Saved Recipes 
+
+Recipes that have been saved by users for later use.
+
+## Testing 
+
+This application was built with testing from enzyme.
+
+## Screenshots
+
+### IngredientsPage
+
+![ingredientsMain]()
+
+### RecipesPage
+
+### Login Page
+
+
+### Registration 
 
 ### Built With
 
