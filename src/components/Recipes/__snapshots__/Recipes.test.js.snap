@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IngredientItem component renders a recipe given props 1`] = `
+<div
+  className="miniSection"
+>
+  <li
+    className="recipeItem one-edge-shadow"
+    style={
+      Object {
+        "background": "linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ), url(https://spoonacular.com/recipeImages/645152-636x393.jpg) no-repeat center center",
+      }
+    }
+  >
+    <h2>
+      Grandma's Apple Crisp
+    </h2>
+    <button
+      className="expandButton"
+      onClick={[Function]}
+    >
+      <h3>
+        Expand
+      </h3>
+    </button>
+  </li>
+  <br />
+</div>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IngredientsPage component renders a Ingredient in ul for each Ingredient in array 1`] = `null`;
+
+exports[`IngredientsPage component renders an RecipePage by default 1`] = `
+<div
+  className="recipeSection"
+>
+  <h1
+    className="recipeTitle"
+  >
+    Your Recipes
+  </h1>
+  <ul
+    className="recipeList"
+  />
+</div>
+`;

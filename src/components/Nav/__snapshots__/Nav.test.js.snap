@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav component renders a Nav 1`] = `
+<Fragment>
+  <ul
+    className="mainNav one-edge-shadow navColor"
+  >
+    <li
+      className="homeButton"
+    >
+      <Link
+        to="/"
+      >
+        Home
+      </Link>
+    </li>
+    <li>
+      <a
+        href="#search"
+      >
+        Recipes
+      </a>
+    </li>
+    <li>
+      <img
+        alt="logo"
+        className="logo"
+        src="LemonGreen.jpg"
+      />
+    </li>
+    <li
+      className="loginButton"
+    >
+      <Link
+        to="/login"
+      >
+        Log In
+      </Link>
+    </li>
+    <li
+      className="register"
+    >
+      <Link
+        to="/register"
+      >
+        Register
+      </Link>
+    </li>
+  </ul>
+</Fragment>
+`;

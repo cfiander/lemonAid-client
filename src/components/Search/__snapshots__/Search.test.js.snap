@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Form renders a search by default 1`] = `
+<div>
+  <h1
+    className="ingredientsList"
+  >
+    Ingredient List
+  </h1>
+  <form
+    className=""
+    onSubmit={[Function]}
+  >
+    <label
+      htmlFor="shopping-list-entry"
+    >
+      Add an ingredient
+    </label>
+    <input
+      id="name"
+      name="name"
+      onChange={[Function]}
+      placeholder="Search for..."
+      type="text"
+    />
+    <button
+      className="addIngredientButton"
+      type="submit"
+    >
+      ADD INGREDIENT
+    </button>
+  </form>
+  <br />
+  <Link
+    to="/recipes"
+  >
+    <button
+      className="addIngredientButton"
+      type="submit"
+    >
+      FIND RECIPES
+    </button>
+  </Link>
+</div>
+`;
