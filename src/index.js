@@ -6,7 +6,6 @@ import { RecipeContextProvider } from './contexts/RecipeContext'
 import App from './components/App/App'
 import './index.css'
 
-console.log(process.env)
 
 ReactDOM.render(
     <RecipeContextProvider>

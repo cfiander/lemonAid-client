@@ -15,7 +15,6 @@ export default class Recipes extends Component {
         const recipeId = this.props.recipe.id
         RecipeApiService.getRecipeURL(recipeId)
             .then(data => {
-                console.log(data)
                 this.context.setRecipeURL(data, recipeId)
             })
             .catch(this.context.setError)

@@ -12,9 +12,7 @@ export default class Ingredient extends React.Component {
   handleClickDelete = e => {
     e.preventDefault()
     const ingredientId = this.props.id
-    console.log(ingredientId)
     this.context.deleteIngredient(ingredientId)
-    console.log(this.context)
     
   }
 

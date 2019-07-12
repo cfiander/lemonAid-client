@@ -40,7 +40,6 @@ export class RecipeContextProvider extends React.Component {
     }
 
     setRecipeURL = (recipeURL, recipeId) => {
-        console.log(recipeURL, recipeId, "recipe URL consolelog")
         const updatedRecipeList = [...this.state.recipeList] 
         updatedRecipeList.find(recipe => recipe.id === recipeId).recipeURL = recipeURL;
         this.setState({
@@ -129,7 +128,6 @@ export class RecipeContextProvider extends React.Component {
       }
 
     deleteIngredient = ingredientId => {
-        console.log(ingredientId)
         const newIngredients = this.state.ingredientsList.filter(ingredient =>
           ingredient.stateId !== ingredientId
         )
