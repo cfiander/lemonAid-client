@@ -21,7 +21,8 @@ export default class IngredientsPage extends Component {
           <div className="searchForm">
           <Search/>
           </div>
-          <ul className="filter-controls">
+          {/* The following commented out section is for a soon to come build with filtering optins */}
+          {/* <ul className="filter-controls">
           <li>
             <select>
             <option value="" selected disabled hidden>Diet</option>
@@ -92,7 +93,7 @@ export default class IngredientsPage extends Component {
             <option value="soup">Soup</option>
           </select>
           </li>
-          </ul>
+          </ul> */}
             <ul className="shopping-list js-shopping-list">
               {ingredientsList.map((ingredient, i) =>
                 <li key={i} className="shopping-item">
