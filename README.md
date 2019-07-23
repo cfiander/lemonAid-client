@@ -35,14 +35,26 @@ This application was built with testing from enzyme.
 
 ### IngredientsPage
 
-![ingredientsMain]()
+![LandingPage](Assets/Landing-Page.png)
+
+![LandingPage](Assets/Search-Header.png)
+
+![LandingPage](Assets/Description.png)
+
+![LandingPage](Assets/Ingredients.png)
 
 ### RecipesPage
 
+![LandingPage](Assets/Recipes.png)
+
 ### Login Page
+
+![LandingPage](Assets/Login.png)
 
 
 ### Registration 
+
+![LandingPage](Assets/Registration.png)
 
 ### Built With
 
