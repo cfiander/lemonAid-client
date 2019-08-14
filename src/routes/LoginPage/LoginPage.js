@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import LoginForm from '../../components/LoginForm/LoginForm'
-
+import { Helmet } from "react-helmet";
 export default class LoginPage extends Component {
   static defaultProps = {
     location: {},
     history: {
-      push: () => {},
+      push: () => { },
     },
   }
+  // componentDidMount() {
+  //   document.title = "Lemonaid";
+  // }
 
   handleLoginSuccess = () => {
     const { location, history } = this.props
@@ -17,12 +20,17 @@ export default class LoginPage extends Component {
 
   render() {
     return (
-        <section className="login">
+      <section className="login">
+        <Helmet>
+          <title>Login</title>
+          <meta name="description" content="Lemonaid login form" />
+          <meta name="keywords" cpntent="recipe,food,login" />
+        </Helmet>
         <h1 className="heroTitle">Login</h1>
         <LoginForm
           onLoginSuccess={this.handleLoginSuccess}
         />
-        </section>
+      </section>
     )
   }
 }
