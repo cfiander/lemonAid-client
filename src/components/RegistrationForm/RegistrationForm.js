@@ -19,22 +19,22 @@ export default class RegistrationForm extends Component {
       password: password.value,
       full_name: full_name.value,
     })
-      .then(user => {
-        full_name.value = ''
-        user_name.value = ''
-        password.value = ''
-        this.props.onRegistrationSuccess()
-      })
-      .catch(res => {
-        this.setState({ error: res.error })
-      })
+    .then(user => {
+    full_name.value = ''
+    user_name.value = ''
+    password.value = ''
+    this.props.onRegistrationSuccess()
+    })
+    .catch(res => {
+    this.setState({ error: res.error })
+    })
   }
 
   render() {
     const { error } = this.state
     return (
       <form
-        className='RegistrationForm'
+        className='registrationForm'
         onSubmit={this.handleSubmit}
       >
         <div role='alert'>
@@ -73,7 +73,7 @@ export default class RegistrationForm extends Component {
             id='RegistrationForm__password'>
           </Input>
         </div>
-        <Button type='submit'>
+        <Button type='submit' className="registrationButton">
           Register
         </Button>
       </form>

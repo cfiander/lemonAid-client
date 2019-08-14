@@ -5,50 +5,136 @@ font-family: 'IBM Plex Sans', sans-serif; */ */
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
   }
-  
-.flex-container {
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    justify-content:center;
-    width: 100%;
-    max-width: 1200px
- }
+/*Background Image*/
+  /* background-image: 
+  url(../../images/Vintage-kitchen.jpg) */
 
-section {
-  width: 100%;
-  max-width: 1200px;
+/* Basic Structure */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  color: #333300;
+  line-height: 1.5;
+  text-align:center;
+  margin: 0 auto;
+  text-transform: lowercase;
+  font-variant: small-caps;
 }
 
-@media screen and (max-width: 1200px) {
-  section {
-    height: 70vh;
-    width: 100vw;
+section{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 2.5%;
+  height: 120vh;  
+  overflow: auto;
+}
+
+/* Basic Styling */ 
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.basicButton {
+  text-decoration: none;
+  color: black;
+  border: outset .5px;
+  padding: .5%;
+  margin: 1%;
+  border-radius: 2.5px;
+  box-shadow: 1px 1px 2.5px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+  .lemonImage {
+    height: 20%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .lemonImage {
+    height: 10%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .lemonImage {
+    height: 7%;
   }
 }
 
 
-.hero {
-  background-image: 
+/* Login Page and Registration */
+
+.login {
+  justify-content: flex-start;
+  background: 
+  url(../../images/Fruits-1.jpg);
+  background-repeat: no-repeat;
+  background-origin: center;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-backdrop-filter: contrast(40%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: auto;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.1),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.registration {
+  justify-content: flex-start;
+  background: 
   url(../../images/Vintage-kitchen.jpg);
   background-repeat: no-repeat;
   background-origin: center;
   background-position: center;
   background-attachment: fixed;
+  -webkit-backdrop-filter: contrast(40%);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow: hidden;
+  overflow: auto;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.1),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
 }
 
-.start {
+.loginForm, .registrationForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.loginFormButton, .registrationButton{
+  margin-top: 5%;
+  margin-left: 2%;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/* About Page */
+.about {
   background: 
-  /* linear-gradient(
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.1)
-    ), */
-  url(../../images/Fruits-1.jpg) no-repeat center center fixed;
+  linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ), 
+  url(../../images/table.jpg);
+  background-repeat: no-repeat;
+  background-origin: center;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-backdrop-filter: contrast(40%);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -56,129 +142,325 @@ section {
   overflow: hidden;
 }
 
-.ingredientsSearch {
-  background: url(../../images/table.jpg) no-repeat center center fixed;
+.appDescription {
+  box-shadow: 2.5px 2.5px 5px;
+  border-radius: 15px;
+  padding: 5%;
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  flex: .9;
+  color: whitesmoke
+}
+
+.internalContent {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.lemonImage {
+  height: 25%;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .lemonImage {
+    height: 20%;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .lemonImage {
+    height: 10%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .lemonImage {
+    height: 7%;
+  }
+}
+
+
+/* Landing Page */
+
+.landingPage {
+  background: 
+  url(../../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-origin: center;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-backdrop-filter: contrast(40%);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.1),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
 }
 
-
-.recipeSection {
-  background: url(../../images/marble.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  overflow: hidden;
-  height: 100%;
- 
-}
-
-
-.recipeList {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.recipeSection {
-  text-align: center;
-}
-
-
-.recipeItem {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  overflow: hidden;
-}
-
-a {
-  text-decoration: none;
-}
-
-.li {
-  list-style-type: none;
+.hero {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .heroTitle {
-  font-family: 'Playfair Display', serif;
+  text-decoration: underline;
   font-size: 300%;
-  text-align: center;
-  font-weight: bold;
-  padding-top: 40%;
-  color: #108532;
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.1),
              0px 8px 13px rgba(0,0,0,0.1),
              0px 18px 23px rgba(0,0,0,0.1);
 }
 
 .startHere {
-  font-family: 'Playfair Display', serif;
-  font-size: 300%;
-  text-align: center;
-  font-weight: bold;
-  padding-top: 40%;
-  color: #108532;
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+  font-size: 200%;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.1),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+.hero h2 {
+  font-size: 2em;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.1),
              0px 8px 13px rgba(0,0,0,0.1),
              0px 18px 23px rgba(0,0,0,0.1);
 }
 
+.ingredientsContainer {
+  padding-top: 0;
+}
 
-.appDescription {
-  width: 70%;
-  margin: auto; 
-  padding: 2.5%;
-  color: whitesmoke;
-  text-align: center;
-  font-size: 1.5rem;
+.ingredientTitle {
+  font-size: 200%;
+  text-decoration: underline;
+}
+
+.learnMore {
+  margin-top: 2%;
+  font-size: 12px;
+}
+
+.aboutArrow {
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+
+.ingredients {
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+  border-radius: 15px;
+  padding: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  flex: .85;
+} 
+
+.addLabel {
+  font-size: 27px;
   font-weight: bold;
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-             0px 8px 13px rgba(0,0,0,0.1),
-             0px 18px 23px rgba(0,0,0,0.1);
+}
+form input{
+  font-size: 100%;
 }
 
-.searchForm {
-  width: 70%;
-  margin: auto; 
-  padding: 2.5%;
-  color: whitesmoke;
-  text-align: center;
-}
-
-.one-edge-shadow {
-  box-shadow: 0 8px 6px -6px black;
-}
-
-.filter-controls {
- display: flex;
- justify-content: space-between;
- align-items: center;
- /* flex-direction: column; */
- margin-top: 0;
- margin-bottom: 0;
- width: 100%;
- font-family: 'IBM Plex Sans', sans-serif;
-}
-
-.filter-controls li {
-  display: inline;
-  border: 1px solid;
-}
-
-.ingredientsList {
-  font-family: 'Playfair Display', serif;
-font-size: 300%;
-text-align: center;
-font-weight: bold;
+form .logo {
+  height: 100%;
+  display: inline-block;
 }
 
 .addIngredientButton {
-  background-color: whitesmoke;
+  height: 19px;
+  margin-top:21px;
+  border: none;
+}
+
+.addIngredientButton:hover {
+  cursor: pointer;
+}
+
+.addIngredientButton:active {
+  color: green;
+}
+
+.addIngredientButton:focus {
+  outline: none;
+}
+
+#ingredientName {
+  height: 100%;
+  border: inset .25px;
+  background-color: white;
+}
+
+.plus {
+  font-size: 25px;
+  display: inline-block;
+}
+
+.ingredientList {
+  padding-left: 0;
+  padding-bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ingredient {
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-size: 90%;
+  border: solid #424242 1px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px;
+  color: #333300;
+}
+
+.ingredient h2 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.utensils {
+  font-size: 40px;
+}
+
+.remove {
+  font-weight: bold;
+  border: solid .25px;
+  margin-top: 2%;
+}
+
+.remove:hover {
+  font-weight: bold;
+  border: solid .25px;
+  cursor: pointer;
+}
+
+/* Recipe Section */
+
+.recipeTitle {
+  text-decoration: underline;
+  font-size: 300%;
+  color: #333300;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.1),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.recipeSection {
+  background: url(../../images/Fruitsvegs2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 2.5%;
+  height: 100%; 
+}
+
+.recipeList {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipeItem {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+  border-radius: 15px;
+  padding: 5%;
+  max-width: 393px;
+  margin: 10px auto;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.recipeDetails {
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-size: 90%;
+  border: solid #424242 .25px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px;
+  width: 100%;
+  color: black;
+  background: rgb(204, 204, 204); 
+    background: rgba(204, 204, 204, 0.8);
+}
+
+@media screen and (max-width: 600px) {
+  .recipeItem {
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.expandButton, .collapseButton {
+  text-decoration: none;
+  color: black;
+  border: outset .5px;
+  padding: .5%;
+  margin: 1%;
+  border-radius: 2.5px;
+  box-shadow: 1px 1px 2.5px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.expandArrow, .collapseArrow {
+ font-size: 30px;
+}
+
+.expandedDetails {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 5%;
+  color: black;
+  font-weight: bold;
+}
+
+.missedIngredientList {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 5%;
+}
+
+.missedIngredient {
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-size: 90%;
+  border: solid #424242 1px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px;
+  color: #333300;
+}
+
+.missedTitle {
+  text-decoration: underline;
 }
 
 

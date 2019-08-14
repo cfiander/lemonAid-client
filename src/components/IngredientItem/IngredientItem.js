@@ -1,6 +1,7 @@
 import React from 'react'
 import RecipeContext from '../../contexts/RecipeContext'
-import './IngredientItem.css'
+
+
 
 
 export default class Ingredient extends React.Component {
@@ -12,25 +13,25 @@ export default class Ingredient extends React.Component {
   handleClickDelete = e => {
     e.preventDefault()
     const ingredientId = this.props.id
-    this.context.deleteIngredient(ingredientId)
-    
+    this.context.deleteIngredient(ingredientId) 
   }
 
   render() {
     const { name, id, } = this.props
     return (
-      <div className='asdf' key={id}>
-        <h2 className='asdf'>
+      <>
+        <h2>
           {name}
         </h2>
+        <div className="utensils">&#127819;</div>
         <button
-          className="addIngredientButton"
+          className="remove basicButton"
           type='button'
           onClick={this.handleClickDelete}
         >
           REMOVE
         </button>
-      </div>
+      </>
     )
   }
 }

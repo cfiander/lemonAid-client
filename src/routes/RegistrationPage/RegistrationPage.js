@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Section } from '../../components/Utils/Utils'
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm'
 
 export default class RegistrationPage extends Component {
@@ -16,12 +15,12 @@ export default class RegistrationPage extends Component {
 
   render() {
     return (
-      <Section className='RegistrationPage'>
-        <h2>Register</h2>
+      <section className="registration">
+        <h1 className="heroTitle">Register</h1>
         <RegistrationForm
           onRegistrationSuccess={this.handleRegistrationSuccess}
         />
-      </Section>
+      </section>
     )
   }
 }

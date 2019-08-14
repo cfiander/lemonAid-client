@@ -7,12 +7,13 @@
  margin-top: 0;
  margin-bottom: 0;
  font-family: 'IBM Plex Sans', sans-serif;
- -webkit-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
-	-moz-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
-  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+ -webkit-box-shadow: 0 4px 8px -2px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0 4px 8px -2px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,0.25);
   position: fixed;
   width: 100%;
 }
+
 .navlinks {
   justify-content: space-between;
 }
@@ -41,9 +42,3 @@ ul {
   padding-right: 5%;
 }
 
-@media screen and (max-width: 375px) {
-   li {
-    /* max-height: 26px; */
-    
-  }
-}

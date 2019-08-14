@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import RecipeContext from '../../contexts/RecipeContext'
 import RecipeApiService from '../../services/recipes-api-service'
 import Recipes from '../../components/Recipes/Recipes'
-import './RecipePage.css'
 
 export default class RecipePage extends Component {
     static contextType = RecipeContext
@@ -14,7 +13,7 @@ export default class RecipePage extends Component {
             RecipeApiService.getRecipes(formatted)
             .then(this.context.setRecipeList)
             .catch(this.context.setError)
-        },600)
+        },200)
     }
 
     renderRecipes() {

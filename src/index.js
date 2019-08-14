@@ -6,7 +6,6 @@ import { RecipeContextProvider } from './contexts/RecipeContext'
 import App from './components/App/App'
 import './index.css'
 
-
 ReactDOM.render(
     <RecipeContextProvider>
         <BrowserRouter>

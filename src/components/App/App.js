@@ -6,7 +6,8 @@ import LoginPage from '../../routes/LoginPage/LoginPage'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 import './App.css';
-import LandingPage from '../LandingPage/LandingPage';
+import LandingPage from '../../routes/LandingPage/LandingPage';
+import AboutPage from '../../routes/AboutPage/AboutPage';
 
 
 
@@ -14,7 +15,7 @@ import LandingPage from '../LandingPage/LandingPage';
 class App extends React.Component {
   render() {
     return (
-      <div className="wrapper">
+      <main>
         <nav>
             <Nav/>
         </nav>
@@ -24,6 +25,11 @@ class App extends React.Component {
         exact
         path={`/`}
         component={LandingPage}
+        />
+        <Route 
+        exact
+        path={`/about`}
+        component={AboutPage}
         />
         <Route 
           path={`/login`}
@@ -42,7 +48,7 @@ class App extends React.Component {
         />
         </Switch>
         </main>
-      </div>
+      </main>
     )
   }
 }

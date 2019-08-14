@@ -52,11 +52,11 @@ export default class Nav extends Component {
             <Link to={`/`}>Home</Link>
         </li>
         <li>
-        <a href='#search'>
+        <Link to={'/recipes'}>
           Recipes
-        </a>
+        </Link>
         </li>
-        <li><img className="logo" alt="logo" src={`${logo}`}/></li>
+        <li><Link to={`/about`}><img className="logo" alt="logo" src={`${logo}`}/></Link></li>
         {TokenService.hasAuthToken() && this.context.loggedIn
           ? this.renderLogoutLink()
           : this.renderLoginLink()}

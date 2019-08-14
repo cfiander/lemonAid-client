@@ -8,7 +8,7 @@ export default class Recipes extends Component {
     static contextType = RecipeContext
 
     state = {
-        fullRecipe : false
+        fullRecipe: false
     }
 
     componentDidMount() {
@@ -21,22 +21,22 @@ export default class Recipes extends Component {
     }
 
     createRecipeImage = () => {
-            let innerArray = [];
-            innerArray.push(`https://spoonacular.com/recipeImages/`)
-            innerArray.push(this.props.recipe.id)
-            innerArray.push(`-636x393`)
-            innerArray.push('.jpg')
-            const image = innerArray.join('')
-            return image
-        }
-    
+        let innerArray = [];
+        innerArray.push(`https://spoonacular.com/recipeImages/`)
+        innerArray.push(this.props.recipe.id)
+        innerArray.push(`-636x393`)
+        innerArray.push('.jpg')
+        const image = innerArray.join('')
+        return image
+    }
+
 
     renderMissedIngredients = () => {
-    return this.props.recipe.missedIngredients.map((ingredient, i) => {
-        return (
-            <li key={i}>{ingredient.name}</li>
-        )
-    })
+        return this.props.recipe.missedIngredients.map((ingredient, i) => {
+            return (
+                <li key={i} className="missedIngredient"><div className="utensils">&#127869;</div>{ingredient.name}</li>
+            )
+        })
     }
 
     handleExpand = () => {
@@ -45,7 +45,7 @@ export default class Recipes extends Component {
 
     handleCollapse = () => {
         this.context.setRecipeExpandedFalse(this.props.recipe.id)
-    }    
+    }
 
     handleViewFull = () => {
         this.context.setRecipeViewFullTrue(this.props.recipe.id)
@@ -57,59 +57,70 @@ export default class Recipes extends Component {
 
     renderCollapsed = () => {
         const { recipe } = this.props
+        console.log(recipe)
         return (
-            <>
-            <li className="recipeItem one-edge-shadow" style ={ { background: `linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ), url(${this.createRecipeImage()}) no-repeat center center` } }>
-                <h2>{recipe.title}</h2>
-                <button onClick={this.handleExpand} className="expandButton"><h3>Expand</h3></button>
+            <li className="recipeItem"
+                style={{
+                    background: ` url(${this.createRecipeImage()}) no-repeat center center`
+                }}>
+                <div className="recipeDetails">
+                    <h2>{recipe.title}</h2>
+                    <button onClick={this.handleExpand} className="expandButton">
+                        <div className="expandArrow">&#x2965;</div>
+                        <h3>Expand</h3>
+                    </button>
+                </div>
             </li>
-            <br/>
-            </>
         )
     }
 
     renderExpanded = () => {
         const { recipe } = this.props
         return (
-            
-            <li className="recipeItem one-edge-shadow" style ={ { background: `linear-gradient(
-                rgba(0, 0, 0, 0.4),
-                rgba(0, 0, 0, 0.4)
-              ), url(${this.createRecipeImage()}) no-repeat center center, ` } }>
-                <h2>{recipe.title}</h2>
-                <h4>Likes:{recipe.likes}</h4>
-                <h5>Missed Ingredients: {recipe.missedIngredientCount}</h5>
-                <h5>Used Ingredients: {recipe.usedIngredientCount}</h5>
-                <h4>
-                    Missed Ingredients
-                </h4>
-                <ul className="">
-                    {this.renderMissedIngredients()}
-                </ul>
-                <button onClick={this.handleViewFull} className="expandButton"><h3>View Full Recipe</h3></button>
-                <button onClick={this.handleCollapse} className="collapseButton"><h3>Collapse</h3></button>
+            <li className="recipeItem" style={{
+                background: `
+              ), url(${this.createRecipeImage()}) no-repeat center center, `
+            }}>
+                <div className="recipeDetails">
+                    <div className="expandedDetails">
+                        <h2>{recipe.title}</h2>
+                        <h3 className="missedTitle">
+                            Missed Ingredients
+                        </h3>
+                        <ul className="missedIngredientList">
+                            {this.renderMissedIngredients()}
+                        </ul>
+                    </div>
+                    <button onClick={this.handleViewFull} className="expandButton">
+                        <div className="expandArrow">&#x2965;</div>
+                        <h3>View Full Recipe</h3>
+                    </button>
+                    <button onClick={this.handleCollapse} className="collapseButton">
+                        <div className="collapseArrow">&#x2963;</div>
+                        <h3>Collapse</h3>
+                    </button>
+                </div>
             </li>
         )
     }
 
     renderFullRecipe = () => {
-        const {recipe} = this.props
-        const recipeURL= recipe.recipeURL
+        const { recipe } = this.props
+        const recipeURL = recipe.recipeURL
         return (
-            <li className="recipeItem one-edge-shadow">
-            <h2>{recipe.title}</h2>
-            <button onClick={this.handleReturn}><h4>Go Back</h4></button>
-            <Iframe url={`${recipeURL}`}
-            width="100%"
-            height="450px"
-            className="recipeItem"/>
+            <li className="recipeItem">
+                <button onClick={this.handleReturn}>
+                    <div className="collapseArrow">&#x2963;</div>
+                    <h4>Go Back</h4>
+                </button>
+                <Iframe url={`${recipeURL}`}
+                    width="100%"
+                    height="450px"
+                    className="recipeItem" />
             </li>
         )
     }
-    
+
     renderFunction = () => {
         if (this.props.recipe.expanded && this.props.recipe.fullRecipe) {
             return this.renderFullRecipe()
@@ -127,10 +138,10 @@ export default class Recipes extends Component {
     render() {
         return (
             <div className="miniSection">
-            {/* <a rel="noopener" href={recipeURL}> */}
-            {/* </a> */}
-            {this.renderFunction()}
-            
+                {/* <a rel="noopener" href={recipeURL}> */}
+                {/* </a> */}
+                {this.renderFunction()}
+
             </div>
         )
     }

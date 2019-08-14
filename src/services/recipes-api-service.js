@@ -16,7 +16,6 @@ const RecipesApiService = {
                 ? res.json().then(e => Promise.reject(e))
                 : res.json()
             )
-            // .then(data => console.log(data))
     },
     formatIngredients(ingredients) {
         const nameArray = ingredients.map(ingredient => {
