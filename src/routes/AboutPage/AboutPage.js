@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 export default class AboutPage extends Component {
 
   render() {
-    const { ingredientsList = [] } = this.context
     return (
       <section className="about">
         <div className="appDescription">
