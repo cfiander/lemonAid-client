@@ -1,7 +1,7 @@
 import uuid from 'uuid'
 
 const ingredients = [
-    {stateId: uuid(), name: "apple"},
+    {stateId: uuid(), name: "lemon"},
 ]
 
 export default ingredients

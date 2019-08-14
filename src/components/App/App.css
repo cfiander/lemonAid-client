@@ -276,6 +276,7 @@ form .logo {
   height: 19px;
   margin-top:21px;
   border: none;
+  background-color: transparent;
 }
 
 .addIngredientButton:hover {

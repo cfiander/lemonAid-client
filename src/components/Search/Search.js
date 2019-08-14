@@ -72,7 +72,7 @@ class Search extends Component {
             type="text"
             name="name"
             id="ingredientName"
-            placeholder="Add an ingredient..."
+            placeholder="Type ingredient"
             ref={input => this.search = input}
             onChange={e => this.updateName(e.target.value)}
           />

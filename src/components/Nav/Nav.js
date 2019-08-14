@@ -49,7 +49,7 @@ export default class Nav extends Component {
     return <>
       <ul className={`mainNav one-edge-shadow ${this.props.path !== '/' ? `navColor` : ''}`}>
         <li className="homeButton">
-            <Link to={`/`}>Home</Link>
+            <Link to={`/LandingPage`}>Home</Link>
         </li>
         <li>
         <Link to={'/recipes'}>

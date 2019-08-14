@@ -24,12 +24,17 @@ class App extends React.Component {
         <Route 
         exact
         path={`/`}
-        component={LandingPage}
+        component={AboutPage}
         />
         <Route 
         exact
         path={`/about`}
         component={AboutPage}
+        />
+        <Route 
+        exact
+        path={`/LandingPage`}
+        component={LandingPage}
         />
         <Route 
           path={`/login`}
