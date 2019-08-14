@@ -57,7 +57,6 @@ export default class Recipes extends Component {
 
     renderCollapsed = () => {
         const { recipe } = this.props
-        console.log(recipe)
         return (
             <li className="recipeItem"
                 style={{
