@@ -22,12 +22,8 @@ export default class Recipes extends Component {
 
     createRecipeImage = () => {
         let innerArray = [];
-        innerArray.push(`https://spoonacular.com/recipeImages/`)
-        innerArray.push(this.props.recipe.id)
-        innerArray.push(`-636x393`)
-        innerArray.push('.jpg')
-        const image = innerArray.join('')
-        return image
+        innerArray.push(`https://spoonacular.com/recipeImages/`,this.props.recipe.id,`-636x393`,'.jpg')
+        return innerArray.join('')
     }
 
 
@@ -57,6 +53,7 @@ export default class Recipes extends Component {
 
     renderCollapsed = () => {
         const { recipe } = this.props
+
         return (
             <li className="recipeItem"
                 style={{
