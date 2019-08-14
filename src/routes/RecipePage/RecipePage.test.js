@@ -39,7 +39,7 @@ describe(`IngredientsPage component`, () => {
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
-  it('renders a Ingredient in ul for each Ingredient in array', () => {
+  it('renders a recipe in ul for each recipe in the array', () => {
     const ul = shallow(<RecipePage {...props} />)
       .find('recipeList')
     expect(toJson(ul)).toMatchSnapshot()

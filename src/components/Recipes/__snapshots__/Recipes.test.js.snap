@@ -1,32 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IngredientItem component renders a recipe given props 1`] = `
+exports[`Recipes component renders a recipe by default 1`] = `
 <div
   className="miniSection"
 >
   <li
-    className="recipeItem one-edge-shadow"
+    className="recipeItem"
     style={
       Object {
-        "background": "linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ), url(https://spoonacular.com/recipeImages/645152-636x393.jpg) no-repeat center center",
+        "background": " url(https://spoonacular.com/recipeImages/645152-636x393.jpg) no-repeat center center",
       }
     }
   >
-    <h2>
-      Grandma's Apple Crisp
-    </h2>
-    <button
-      className="expandButton"
-      onClick={[Function]}
+    <div
+      className="recipeDetails"
     >
-      <h3>
-        Expand
-      </h3>
-    </button>
+      <h2>
+        Grandma's Apple Crisp
+      </h2>
+      <button
+        className="expandButton"
+        onClick={[Function]}
+      >
+        <div
+          className="expandArrow"
+        >
+          ⥥
+        </div>
+        <h3>
+          Expand
+        </h3>
+      </button>
+    </div>
   </li>
-  <br />
+</div>
+`;
+
+exports[`Recipes component renders a recipe given props 1`] = `
+<div
+  className="miniSection"
+>
+  <li
+    className="recipeItem"
+    style={
+      Object {
+        "background": " url(https://spoonacular.com/recipeImages/645152-636x393.jpg) no-repeat center center",
+      }
+    }
+  >
+    <div
+      className="recipeDetails"
+    >
+      <h2>
+        Grandma's Apple Crisp
+      </h2>
+      <button
+        className="expandButton"
+        onClick={[Function]}
+      >
+        <div
+          className="expandArrow"
+        >
+          ⥥
+        </div>
+        <h3>
+          Expand
+        </h3>
+      </button>
+    </div>
+  </li>
 </div>
 `;

@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders the registration page renders a registrationform by default 1`] = `
-<Section
-  className="RegistrationPage"
+<section
+  className="registration"
 >
-  <h2>
+  <h1
+    className="heroTitle"
+  >
     Register
-  </h2>
+  </h1>
   <RegistrationForm
     onRegistrationSuccess={[Function]}
   />
-</Section>
+</section>
 `;

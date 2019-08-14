@@ -2,7 +2,7 @@
 
 exports[`renders the form renders a registrationform by default 1`] = `
 <form
-  className="RegistrationForm"
+  className="registrationForm"
   onSubmit={[Function]}
 >
   <div
@@ -56,16 +56,8 @@ exports[`renders the form renders a registrationform by default 1`] = `
       type="password"
     />
   </div>
-  <div
-    className="nick_name"
-  >
-    <label
-      htmlFor="RegistrationForm__nick_name"
-    >
-      Nickname
-    </label>
-  </div>
   <Button
+    className="registrationButton"
     type="submit"
   >
     Register

@@ -1,45 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search Form renders a search by default 1`] = `
-<div>
+<Fragment>
   <h1
-    className="ingredientsList"
+    className="ingredientTitle"
   >
-    Ingredient List
+    Ingredient Table
   </h1>
   <form
-    className=""
     onSubmit={[Function]}
   >
-    <label
-      htmlFor="shopping-list-entry"
-    >
-      Add an ingredient
-    </label>
     <input
-      id="name"
+      id="ingredientName"
       name="name"
       onChange={[Function]}
-      placeholder="Search for..."
+      placeholder="Add an ingredient..."
       type="text"
     />
     <button
       className="addIngredientButton"
       type="submit"
     >
-      ADD INGREDIENT
+      <img
+        alt="logo"
+        className="logo"
+        src="Lemon.jpg"
+      />
+      <div
+        className="plus"
+      >
+        +
+      </div>
     </button>
   </form>
-  <br />
-  <Link
-    to="/recipes"
-  >
-    <button
-      className="addIngredientButton"
-      type="submit"
-    >
-      FIND RECIPES
-    </button>
-  </Link>
-</div>
+</Fragment>
 `;

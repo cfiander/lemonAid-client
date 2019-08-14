@@ -6,7 +6,7 @@ export default function LandingPage(props) {
         <>
         <section className="landingPage">
             <div className="hero">
-                    <div class="learnMore">
+                    <div>
                     <p className="aboutArrow">&#x2191;</p>
                     <p>Click the lemon to learn more</p>
                     </div>

@@ -4,7 +4,7 @@ import toJson from 'enzyme-to-json'
 import Recipes from './Recipes';
 
 
-describe(`IngredientItem component`, () => {
+describe(`Recipes component`, () => {
   const recipe = {
         "id":645152,
         "expanded": false,
@@ -18,7 +18,7 @@ describe(`IngredientItem component`, () => {
   }
 
   it('renders a recipe by default', () => {
-    const wrapper = shallow(<Recipes />)
+    const wrapper = shallow(<Recipes recipe={recipe}/>)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 

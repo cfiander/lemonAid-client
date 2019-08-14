@@ -1,38 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IngredientItem component renders an ingredient by default 1`] = `
-<div
-  className="asdf"
->
-  <h2
-    className="asdf"
-  />
+<Fragment>
+  <h2 />
+  <div
+    className="utensils"
+  >
+    🍋
+  </div>
   <button
-    className="addIngredientButton"
+    className="remove basicButton"
     onClick={[Function]}
     type="button"
   >
     REMOVE
   </button>
-</div>
+</Fragment>
 `;
 
 exports[`IngredientItem component renders an ingredient given props 1`] = `
-<div
-  className="asdf"
-  key="a"
->
-  <h2
-    className="asdf"
-  >
+<Fragment>
+  <h2>
     test-class-name
   </h2>
+  <div
+    className="utensils"
+  >
+    🍋
+  </div>
   <button
-    className="addIngredientButton"
+    className="remove basicButton"
     onClick={[Function]}
     type="button"
   >
     REMOVE
   </button>
-</div>
+</Fragment>
 `;
