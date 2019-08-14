@@ -1,3 +1,82 @@
+
+# LemonAid
+
+One Paragraph of project description goes here
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+## Structure
+
+The main functionality of the app is open to all users. This represents the first two pages of the application--ingredients
+and Recipes--which are public routes. 
+
+The sole private route is the Saved Recipes page. This application uses JWT Authentication Tokens associated with proper username and login and stored in sessionStorage, which allow access to the saved recipes page, which itself is associated with a specific user.
+
+### Three Main Pages
+
+### IngredientsPage
+
+Users can add ingredients at the bottom of the page and launch a search for recipes.
+
+### RecipesPage
+
+Users are greeted with a rendered list of ingredients based on the Ingredients entered in the IngredientsPage. Data is carried over via context--and so is lost upon refresh. 
+
+### Saved Recipes 
+
+Recipes that have been saved by users for later use.
+
+## Testing 
+
+This application was built with testing from enzyme.
+
+## Screenshots
+
+### IngredientsPage
+
+![LandingPage](Assets/Landing-Page.png)
+
+![LandingPage](Assets/Search-Header.png)
+
+![LandingPage](Assets/Description.png)
+
+![LandingPage](Assets/Ingredients.png)
+
+### RecipesPage
+
+![LandingPage](Assets/Recipes.png)
+
+### Login Page
+
+![LandingPage](Assets/Login.png)
+
+
+### Registration 
+
+![LandingPage](Assets/Registration.png)
+
+### Built With
+
+What things you need to install the software and how to install them
+
+React (via create-react-app)
+CSS
+JWT Decode
+
+### Installing
+
+Clone this repo:
+
+Initialize a new empty git repo:
+rm -rf .git && git init
+
+Install nodes:
+Run npm install inside directory
+
+
+>>>>>>> 4547d07e92af3f95cbaae3d9daf4f51558d96809
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
