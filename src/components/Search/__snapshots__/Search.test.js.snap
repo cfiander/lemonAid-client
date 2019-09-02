@@ -14,7 +14,7 @@ exports[`Search Form renders a search by default 1`] = `
       id="ingredientName"
       name="name"
       onChange={[Function]}
-      placeholder="Add an ingredient..."
+      placeholder="Type ingredient"
       type="text"
     />
     <button
@@ -32,6 +32,10 @@ exports[`Search Form renders a search by default 1`] = `
         +
       </div>
     </button>
+    <ValidationError
+      hasError={true}
+      message=""
+    />
   </form>
 </Fragment>
 `;

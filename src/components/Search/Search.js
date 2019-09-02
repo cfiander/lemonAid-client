@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import RecipeContext from '../../contexts/RecipeContext'
 import uuid from 'uuid'
 import logo from '../../images/Lemon.jpg'
+import ValidationError from '../../ValidationError'
 
 import { } from "@fortawesome/free-solid-svg-icons";
 import { } from "@fortawesome/react-fontawesome";
@@ -29,32 +30,31 @@ class Search extends Component {
   }
 
   validateName(fieldValue) {
+    console.log(this.state)
     const fieldErrors = { ...this.state.validationMessages };
     let hasError = false;
 
     fieldValue = fieldValue.trim();
-    if (fieldValue.length === 0) {
-      fieldErrors.name = 'Name is required';
+
+    if (fieldValue.length < 3) {
+      fieldErrors.name = 'Ingredients must be at least 3 characters long';
       hasError = true;
     } else {
-      if (fieldValue.length < 2) {
-        fieldErrors.name = 'Name must be at least 3 characters long';
-        hasError = true;
-      } else {
-        fieldErrors.name = '';
-        hasError = false;
-      }
+      fieldErrors.name = '';
+      hasError = false;
     }
 
     this.setState({
       validationMessages: fieldErrors,
       nameValid: !hasError
     }, this.formValid);
-
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
+    if (!this.state.nameValid) {
+      return;
+    }
     const ingredient = {
       key: uuid(),
       stateId: uuid(),
@@ -82,6 +82,7 @@ class Search extends Component {
             <img className="logo" alt="logo" src={`${logo}`} />
             <div className="plus">&#x2b;</div>
           </button>
+          <ValidationError hasError={!this.state.nameValid} message={this.state.validationMessages.name}/>  
         </form>
       </>
     )

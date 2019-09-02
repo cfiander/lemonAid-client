@@ -6,6 +6,22 @@ exports[`IngredientsPage component renders an RecipePage by default 1`] = `
 <div
   className="recipeSection"
 >
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Lemonaid
+    </title>
+    <meta
+      content="A list of recipes based on your search"
+      name="description"
+    />
+    <meta
+      cpntent="recipe,registration"
+      name="keywords"
+    />
+  </HelmetWrapper>
   <h1
     className="recipeTitle"
   >

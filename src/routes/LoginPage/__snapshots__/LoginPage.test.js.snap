@@ -4,6 +4,22 @@ exports[`IngredientsPage component renders an IngredientsPage by default 1`] = `
 <section
   className="login"
 >
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Login
+    </title>
+    <meta
+      content="Lemonaid login form"
+      name="description"
+    />
+    <meta
+      cpntent="recipe,food,login"
+      name="keywords"
+    />
+  </HelmetWrapper>
   <h1
     className="heroTitle"
   >

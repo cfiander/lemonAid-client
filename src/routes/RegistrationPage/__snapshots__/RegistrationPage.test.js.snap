@@ -4,6 +4,22 @@ exports[`Renders the registration page renders a registrationform by default 1`]
 <section
   className="registration"
 >
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Registration
+    </title>
+    <meta
+      content="Register as a lemonaid user"
+      name="description"
+    />
+    <meta
+      cpntent="recipe,registration"
+      name="keywords"
+    />
+  </HelmetWrapper>
   <h1
     className="heroTitle"
   >

@@ -9,9 +9,9 @@ exports[`Nav component renders a Nav 1`] = `
       className="homeButton"
     >
       <Link
-        to="/"
+        to="/LandingPage"
       >
-        Home
+        Search
       </Link>
     </li>
     <li>

@@ -29,18 +29,18 @@ export default class Nav extends Component {
   renderLoginLink() {
     return (
       <>
-      <li className='loginButton'>
-        <Link
-          to='/login'>
-          Log In
+        <li className='loginButton'>
+          <Link
+            to='/login'>
+            Log In
         </Link>
-      </li>
-      <li className="register">
-        <Link
-          to='/register'>
-          Register
+        </li>
+        <li className="register">
+          <Link
+            to='/register'>
+            Register
         </Link>
-      </li>
+        </li>
       </>
     )
   }
@@ -49,14 +49,14 @@ export default class Nav extends Component {
     return <>
       <ul className={`mainNav one-edge-shadow ${this.props.path !== '/' ? `navColor` : ''}`}>
         <li className="homeButton">
-            <Link to={`/LandingPage`}>Home</Link>
+          <Link to={`/LandingPage`}>Search</Link>
         </li>
         <li>
-        <Link to={'/recipes'}>
-          Recipes
+          <Link to={'/recipes'}>
+            Recipes
         </Link>
         </li>
-        <li><Link to={`/about`}><img className="logo" alt="logo" src={`${logo}`}/></Link></li>
+        <li><Link to={`/about`}><img className="logo" alt="logo" src={`${logo}`} /></Link></li>
         {TokenService.hasAuthToken() && this.context.loggedIn
           ? this.renderLogoutLink()
           : this.renderLoginLink()}

@@ -1,46 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LandingPage component renders a LandingPage by default 1`] = `
-<Fragment>
-  <section
-    className="landingPage"
+<section
+  className="landingPage"
+>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
   >
-    <div
-      className="hero"
-    >
-      <div>
-        <p
-          className="aboutArrow"
-        >
-          ↑
-        </p>
-        <p>
-          Click the lemon to learn more
-        </p>
-      </div>
-      <h1
-        className="heroTitle"
+    <title>
+      Lemonaid
+    </title>
+    <meta
+      content="Add ingredients for the recipe search"
+      name="description"
+    />
+    <meta
+      cpntent="recipe"
+      name="keywords"
+    />
+  </HelmetWrapper>
+  <div
+    className="hero"
+  >
+    <div>
+      <p
+        className="aboutArrow"
       >
-        LemonAid
-      </h1>
-      <h1
-        className="startHere"
-      >
-        Search and Add Ingredients
-      </h1>
-      <br />
+        ↑
+      </p>
     </div>
-    <section
-      className="ingredientsContainer"
+    <h1
+      className="heroTitle"
     >
-      <IngredientsPage
-        match={
-          Object {
-            "params": Object {},
-          }
+      LemonAid
+    </h1>
+    <h1
+      className="startHere"
+    >
+      Search and Add Ingredients
+    </h1>
+    <br />
+  </div>
+  <section
+    className="ingredientsContainer"
+  >
+    <IngredientsPage
+      match={
+        Object {
+          "params": Object {},
         }
-      />
-    </section>
+      }
+    />
   </section>
-</Fragment>
+</section>
 `;

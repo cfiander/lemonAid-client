@@ -18,6 +18,7 @@ const RecipeContext = React.createContext({
     setRecipeExpanded: () => {},
     setRecipeViewFullTrue: () => {},
     setRecipeReturn: () => {},
+    formatRecipeURL: () => {},
 })
 
 export default RecipeContext
@@ -39,10 +40,20 @@ export class RecipeContextProvider extends React.Component {
             })
     }
 
-    setRecipeURL = (recipeURL, recipeId) => {
+    formatRecipeURL = (recipeURL) => {
+        console.log(recipeURL)
+        if (recipeURL.includes('https')) {
+            return recipeURL
+        } else {
+           let newURL = [recipeURL.slice(0, 4), 's', recipeURL.slice(4)].join('')
+            return newURL
+        }
+    }
 
+    setRecipeURL = (recipeURL, recipeId) => {
+        let formattedURL = this.formatRecipeURL(recipeURL)
         const updatedRecipeList = [...this.state.recipeList] 
-        updatedRecipeList.find(recipe => recipe.id === recipeId).recipeURL = recipeURL;
+        updatedRecipeList.find(recipe => recipe.id === recipeId).recipeURL = formattedURL;
         this.setState({
             recipeList : updatedRecipeList
         })
@@ -157,6 +168,7 @@ export class RecipeContextProvider extends React.Component {
         setRecipeExpandedFalse: this.setRecipeExpandedFalse,
         setRecipeViewFullTrue: this.setRecipeViewFullTrue,
         setRecipeReturn: this.setRecipeReturn,
+        formatRecipeURL: this.formatRecipeURL,
     }
     return (
             <RecipeContext.Provider value={value}>

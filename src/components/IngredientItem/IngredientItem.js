@@ -23,7 +23,7 @@ export default class Ingredient extends React.Component {
         <h2>
           {name}
         </h2>
-        <div className="utensils">&#127819;</div>
+        <div className="lemonLogo">&#127819;</div>
         <button
           className="remove basicButton"
           type='button'
